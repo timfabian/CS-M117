@@ -1,0 +1,54 @@
+<html>
+<head><title>Test Forms</title></head>
+<body>
+	<h1>Get rooms by geo</h1>
+	<div>
+		<form action="/rooms" method="get">
+			Lat: <input type="text" name="lat"> <br>
+			Lon: <input type="text" name="lon"> <br>
+			<input type="submit">
+		</form>
+	</div>
+	<h1>Create room by geo</h1>
+	<div>
+		Not implemented
+	</div>
+	<h1>Get messages in room</h1>
+	<div>
+		<form action="/test.php" method="get">
+		<input type=hidden name="route" value="rooms">
+			Room: <input type="text" name="roomid"> <br>
+			Last received: <input type="text" name="message_id"> <br>
+			Limit: Not implemented <br>
+			<input type="submit">
+		</form>
+	</div>
+	<h1>Send message in room</h1>
+	<div>
+		<form action="/test.php?route=rooms" method="post">
+			Room: <input type="text" name="roomid"> <br>
+			Device: <input type="text" name="device_id"> <br>
+			Message: <input type="text" name="message"> <br>
+			Last received: <input type="text" name="message_id"> (optional) <br>
+			Limit: Not implemented <br>
+			<input type="submit">
+		</form>
+	</div>
+	<h1>Register nickname</h1>
+	<div>
+		<form action="/test.php?route=nickname_register" method="post">
+			Nickname: <input type="text" name="nickname"> <br>
+			Device: <input type="text" name="device_id"> <br>
+			<input type="submit">
+		</form>
+	</div>
+	<h1>Unregister nickname</h1>
+	<div>
+		<form action="/test.php?route=nickname_unregister" method="post">
+			Nickname: <input type="text" name="nickname"> <br>
+			Device: <input type="text" name="device_id"> <br>
+			<input type="submit">
+		</form>
+	</div>
+</body>
+</html>
